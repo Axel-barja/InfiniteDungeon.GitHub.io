@@ -1,0 +1,466 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+
+
+ body{
+   
+    font-family:fantasy ;
+    
+    display: grid ;
+    grid-template-rows: auto;
+    min-height: 100vh;
+    
+
+    
+}
+
+
+header{
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    
+    
+    
+    
+}
+
+
+
+
+
+
+
+.nav-menu{
+   list-style: none;
+    display: flex; /* Utilizamos display: flex; para el menú */
+    padding: 0%;
+    margin: 0%;
+    align-items: center; /* Centramos verticalmente los elementos del menú */
+    
+}
+
+.nav-items{
+    margin-right: 20px; /* Espacio entre los elementos del menú */
+    padding: 5px;
+    display: block;
+    border-radius: 2px;
+    color: aliceblue;
+   text-decoration: none;
+}
+
+.nav-items:hover{
+
+     background-color: rgba(255, 255, 255, 0.52);
+     transition: all 1s;
+
+}
+.nav-items:last-child{
+
+    /*La pseudo-clase :last-child es un selector CSS que se utiliza para seleccionar el último hijo de un elemento padre. En el contexto del código proporcionado, nav ul li:last-child se refiere al último elemento <li> dentro de una lista desordenada <ul> que está dentro de un elemento de navegación <nav>.
+
+Este selector se utiliza para aplicar estilos específicos al último elemento de una lista, en este caso, para eliminar el margen derecho y evitar que haya un espacio extra después del último elemento de la lista de navegación. De esta manera, se asegura que no haya un espacio innecesario después del último enlace en el menú de navegación.*/
+
+ margin-right: 0%;
+
+
+
+
+}
+
+.nav-link{
+
+    color: rgb(240, 248, 255);
+    text-decoration: none;
+    
+    font-size: 15px;
+}
+
+.nav-link.active, .nav-link:hover{
+    
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+header .logo{
+
+
+    
+    max-width: 80px;
+    height: 80px;
+  
+   
+}
+
+.fa-user{
+    color: aliceblue;
+    
+    
+    
+}
+
+
+
+
+
+main{
+    position: relative;/* Establecer la posición relativa para que el video se pueda superponer */
+    overflow: hidden;/* Ocultar el contenido que se desborda */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin-top:5%;
+    
+}
+
+main video{
+    position: absolute;/* Establecer la posición absoluta para el video */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    object-fit: cover;/* Ajustar el tamaño del video para cubrir el contenedor */
+    z-index: -1; /* Colocar el video detrás del contenido principal */
+
+}
+
+.article1{
+    background-color: rgba(255, 255, 255, 0.189);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    width: 90%;/* Ancho del artículo al 60% del contenedor principal */
+    max-width: 1200px;
+    margin: 0 20%;/* Margen derecha e izquierda del 20% del contenedor principal */
+    height: 1000px;
+
+    text-align: center;
+
+    margin-top: 100px;
+
+
+}
+
+.content-slider{
+ 
+    padding: 10px;
+    background-color: #333;
+    border-radius: 30px;
+ 
+    
+}
+.content__container{
+
+    margin-top: 40px;
+    margin-bottom: 20px;
+    
+}
+
+
+
+.content-slider{
+
+    overflow: hidden; /* Oculta el contenido que se desborde */
+}
+
+
+.slider{
+    display: flex;
+    overflow-x: auto; /*  desplazamiento horizontal */
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    border-radius: 10px;
+}
+
+
+.slider ::-webkit-scrollbar {
+    display: none;
+}
+
+/* Para Samsung Internet */
+.slider ::-webkit-scrollbar {
+    width: 0px; /* 0 para que el ancho este oculto */
+}
+
+
+
+.slider::-webkit-scrollbar {
+    display: none; /* Ocultar la barra de desplazamiento en navegadores basados en WebKit */
+}
+.slider img{
+    flex: 0 0 auto; /* Evita que las imágenes se expandan */
+    width: 100%; /* Ancho del 100% del contenedor */
+    height: 600px; /* Altura automática para mantener la proporción */
+    object-fit: cover; /* ajusta la  imagen para cubrir */
+    scroll-snap-align: start; 
+}
+
+
+/* Estilos para el footer */
+
+
+footer {
+    background-color: #333; 
+  
+    color: #000000; 
+    padding: 20px 0; /* Espacio interno del footer */
+    text-align: center; /* Alineación del texto al centro */
+   
+    
+}
+
+
+.footer__container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px; /* Ancho máximo del footer */
+    margin: 0 auto; /* Centrar el footer horizontalmente */
+    height: 80%;
+
+}
+
+.footer__section {
+    flex: 1 1 300px; /* Tamaño flexible de las secciones del footer */
+    margin-bottom: 20px; /* Espaciado inferior entre las secciones */
+    background-color: rgba(255, 255, 255, 0.108);
+}
+
+.footer__section h3 {
+    margin-bottom: 10px; /* Espaciado inferior del título */
+    font-weight: normal;
+    margin-top: 25px;
+    color: black;
+}
+
+.footer__section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer__section ul li {
+    margin-bottom: 10px; /* Espaciado inferior entre los elementos de la lista */
+}
+
+.footer__section ul li a {
+    color: #000000; /* Color de los enlaces */
+    text-decoration: none; /* Sin subrayado en los enlaces */
+}
+
+.footer__copyright {
+    margin-top: 20px; /* Espaciado superior del mensaje de copyright */
+}
+
+.footer__copyright p{
+    color: rgb(95, 167, 255);
+}
+
+
+
+#containerLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    
+
+}
+
+.container__icon{
+
+    display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+            width: 300px;
+            gap: 15px;
+}
+
+.container__icon img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+       
+}
+
+
+
+#toggle-checkbox {
+    display: none; /* Oculta el checkbox */
+}
+
+#toggleLinks:hover + i,
+#toggle-checkbox:checked ~ i {
+    transform: rotate(180deg); /* Rota el icono al estar activo */
+}
+
+#toggle-checkbox:checked ~ .containerLink {
+    display: block; /* Muestra el contenedor al estar activo */
+}
+
+.containerLink {
+    display: none; /* Oculta el contenedor por defecto */
+    
+    
+}
+
+/* Estilos adicionales según tu diseño */
+
+
+
+
+
+@media (max-width: 952px){
+   
+.fa-user{
+    background: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    
+}
+
+    
+    
+    .nav-link{
+        font-size: 14px;
+        color: rgb(236, 236, 236);
+    }
+
+    
+}
+
+@media(max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    .nav-menu{
+        position:fixed;
+        width: 100%;
+        height: auto;
+        background: #292929f4;
+        margin-top: 80px;
+        top: -100%;
+        left: 0;
+        transition: top 0.5s ease ;
+        clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
+
+        justify-content: center;
+        align-items: center;
+       flex-direction: column-reverse;
+        
+        z-index: 1;
+    }
+    .nav-items{
+       display: block;
+       margin:10px 0;
+       line-height: 20px;
+       text-align: center;
+       
+        
+    }
+    .nav-link{
+        font-size: 20px;
+        
+    }
+    .nav-link:hover, .nav-link.active{
+        background: none;
+        
+    }
+    #check:checked ~ .nav-menu{
+        top:0;
+    }
+
+    .fa-user{
+        font-size: 20px
+    }
+}
+
+/* Media query para tablets */
+@media (max-width: 768px) {
+
+   
+    .article1{
+        width: 80%; /* Reducir el ancho de los artículos al 80% */
+        max-width: none; /* Elimina el ancho máximo */
+        margin: 0 auto; /* Centra los artículos horizontalmente */
+        height: auto; /* Altura automática para adaptarse al contenido */
+        padding: 10px; /* Agrega espacio interno para mejorar la apariencia */
+        margin-top: 100px;
+    }
+
+    .div__section img {
+        max-width: 100%; /* Ajustar el ancho máximo de las imágenes al 100% del contenedor */
+        height: auto; /* Altura automática para mantener la proporción */
+    }
+
+    .footer__container {
+        flex-direction: column; /* Cambia la dirección del flexbox a columna */
+        align-items: center; /* Centra los elementos horizontalmente */
+        height: auto; /* Altura automática para adaptarse al contenido */
+        
+    }
+
+    .footer__section {
+        margin-bottom: 10px; /* Reduce el espaciado inferior entre secciones */
+        flex: 0 1 auto; /* Establecer el tamaño flexible a auto */
+        width: 100%; /* Ancho completo */
+        text-align: center; /* Centra el texto dentro de las secciones del pie de página */
+    }
+    
+    .slider {
+        height: 300px; /* Ajusta la altura del slider según sea necesario */
+        overflow-x: auto; /* Permite el desplazamiento horizontal */
+        scroll-snap-type: x mandatory; /* Hacer que las imágenes se desplacen de una en una */
+    }
+
+    .slider img {
+        width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+        height: 100%; /* Ajusta la altura de la imagen al 100% del contenedor */
+        object-fit: cover; /* Ajusta la imagen para cubrir */
+    }
+
+    #containerLink {
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .container__icon {
+        flex-direction: column; /* Coloca los iconos en columna en pantallas pequeñas */
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px;
+        width: 150px;
+       
+    }
+
+
+    
+}
+
